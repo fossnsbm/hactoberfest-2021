@@ -4,7 +4,6 @@
 gcc -o calculator main.c - compile instructions 
 ELF 64-bit LSB pie executable, x86-64 - bianry file 
 
-checksec 
 
 [*] '/hactoberfest-2021/calculator-c/calculator'
     Arch:     amd64-64-little

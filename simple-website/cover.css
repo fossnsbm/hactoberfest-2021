@@ -2,7 +2,6 @@
  * Globals
  */
 
-
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -11,36 +10,38 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-
 /*
  * Base structure
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  background-image: url(./assets/img/banner-blank-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cover-container {
-  max-width: 42em;
+  /* max-width: 50em; */
 }
-
 
 /*
  * Header
  */
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -50,4 +51,84 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+
+/* footer */
+.footer{
+    background-color: rgb(219,232,217, 1);
+    padding-top: 1em;
+    text-shadow: none;
+}
+
+.footer .row .giving-div h3{
+  margin: 6px 0px;
+  border-radius: 1.05rem;
+  color: rgb(181, 58, 37, 1);
+  font-weight: 700;
+}
+
+.footer .row .giving-div p{
+  font-weight: 700;
+}
+
+.footer .row .giving-div .give-btn {
+  margin: 6px 0px;
+  display: inline;
+  background-color: rgb(181, 58, 37, 1);
+  border-radius: 1.05rem;
+  color: white;
+  font-weight: 500;
+  padding: 5px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.footer .row .giving-div .give-btn:hover {
+  background-color: black;
+}
+
+.footer .row .share-div h5{
+  font-weight: 700;
+}
+
+.footer .row .legal-div h5{
+  font-weight: 700;
+}
+
+.footer .row .legal-div a{
+  font-size: .9em;
+  font-weight: 700;
+  cursor: pointer;
+  width: auto;
+  color: rgba(0,0,0,.5);
+  text-decoration: none;
+}
+.footer .row .legal-div a:hover{
+  color: rgb(181, 58, 37, 1);
+
+}
+.footer .row .legal-div h6:hover {
+  color: rgb(181, 58, 37, 1);
+}
+
+.footer .lower-footer a:hover{
+  cursor: pointer;
+  color: rgb(181, 58, 37, 1);
+}
+
+/* meadia query for footer */
+@media screen and (max-width: 576px) {
+  .footer .row .giving-div{
+    text-align: center !important;
+  }
+
+  .footer .row .share-div{
+    text-align: center !important;
+  }
+
+  .footer .row .legal-div{
+    text-align: center !important;
+  }
+  
 }

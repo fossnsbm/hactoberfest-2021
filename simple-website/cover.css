@@ -24,7 +24,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  /* max-width: 50em; */
 }
 
 /*
@@ -51,4 +51,84 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+
+/* footer */
+.footer{
+    background-color: rgb(219,232,217, 1);
+    padding-top: 1em;
+    text-shadow: none;
+}
+
+.footer .row .giving-div h3{
+  margin: 6px 0px;
+  border-radius: 1.05rem;
+  color: rgb(181, 58, 37, 1);
+  font-weight: 700;
+}
+
+.footer .row .giving-div p{
+  font-weight: 700;
+}
+
+.footer .row .giving-div .give-btn {
+  margin: 6px 0px;
+  display: inline;
+  background-color: rgb(181, 58, 37, 1);
+  border-radius: 1.05rem;
+  color: white;
+  font-weight: 500;
+  padding: 5px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.footer .row .giving-div .give-btn:hover {
+  background-color: black;
+}
+
+.footer .row .share-div h5{
+  font-weight: 700;
+}
+
+.footer .row .legal-div h5{
+  font-weight: 700;
+}
+
+.footer .row .legal-div a{
+  font-size: .9em;
+  font-weight: 700;
+  cursor: pointer;
+  width: auto;
+  color: rgba(0,0,0,.5);
+  text-decoration: none;
+}
+.footer .row .legal-div a:hover{
+  color: rgb(181, 58, 37, 1);
+
+}
+.footer .row .legal-div h6:hover {
+  color: rgb(181, 58, 37, 1);
+}
+
+.footer .lower-footer a:hover{
+  cursor: pointer;
+  color: rgb(181, 58, 37, 1);
+}
+
+/* meadia query for footer */
+@media screen and (max-width: 576px) {
+  .footer .row .giving-div{
+    text-align: center !important;
+  }
+
+  .footer .row .share-div{
+    text-align: center !important;
+  }
+
+  .footer .row .legal-div{
+    text-align: center !important;
+  }
+  
 }

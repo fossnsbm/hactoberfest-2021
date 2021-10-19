@@ -13,6 +13,13 @@ filteropt.addEventListener('click', filterTodo);
 function addTodo(e){
     e.preventDefault();
 
+    if(todoInput.value == ''){
+        document.getElementById('error-div').style.display = 'block';
+        return;
+    }
+
+    document.getElementById('error-div').style.display = 'none';
+
     const todoDiv=document.createElement("div");
     todoDiv.classList.add("todo");
     savaTodo(todoInput.value)
@@ -38,14 +45,58 @@ function addTodo(e){
 }
 
 function deleteCheck(e){
-    console.log(e.target);
+    document.getElementById('error-div').style.display = 'none';
+
     const item=e.target;
     if(item.classList[0]==='trash-btn'){
+        console.log('hi');
+        // const confirmDeleting = window.confirm("Want to delete the to-do?");
+        // if(!confirmDeleting){
+        //     return;
+        // }
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Are you sure ?',
+            text: "You won't be able to revert this !",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it !',
+            cancelButtonText: 'No, cancel !',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Deleted !',
+                'Your To-do has been deleted.',
+                'success'
+              )
+              return;
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your To-do is safe :)',
+                'error'
+              )
+            }
+        });
+        
         const todo=item.parentElement;
         todo.classList.add("out");
         todo.addEventListener('transitionend', function(){
             todo.remove();
         });
+
     }
     if(item.classList[0]==='complete-btn'){
         const todo=item.parentElement;
@@ -55,6 +106,8 @@ function deleteCheck(e){
 }
 
 function filterTodo(e){
+    document.getElementById('error-div').style.display = 'none';
+
     const todos=todoList.childNodes;
     
     todos.forEach(function(todo){

@@ -23,8 +23,10 @@ int main()
     do{
         printf("Enter an operator (+, -, *, /): ");
         scanf(" %c", &op);
-        printf("Enter two operands: ");
-        scanf("%lf %lf", &first, &second);
+        printf("Enter first operand: ");
+        scanf("%lf", &first);
+        printf("Enter second operand: ");
+        scanf("%lf", &second);
 
         switch (op)
         {

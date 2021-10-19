@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #222222;
+    color: #f6f6f6;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+     background-color: #080808; 
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 25px;
+     height: 12vh;
+     position: fixed;
+
+    
+}
+
+.navbar .logo{
+    font-size: 32px;
+    font-weight: 800;
+}
+.navbar .navLinks{
+    width: 350px;
+}
+
+
+.navbar .navLinks ul{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.navbar .navLinks .navlink:hover{
+    color: #7DD181;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNhZmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60); */
+     background-image: url(https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FmZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60); 
+    background-position: center;
+    background-size: cover;
+   
+
+}
+.hero .overlay{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* color: #080808; */
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+.hero .text{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Lobster', cursive;
+}
+.hero .btn{
+    background-color: #7DD181;
+    padding: 10px 25px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 590;
+    color: #080808;
+    border-radius: 5px;
+
+
+}
+.hero .overlay .btn:hover{
+    transform: scaleZ(1.8);
+}
+.services{
+    width: 100%;
+    /* height: 100vh; */
+    padding: 45px 25px;
+}
+.services .heading{
+    font-size:30px ;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    
+}
+.services .cardRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+.services .cardRow .card{
+    background-color: #3d3d3d;
+    padding: 15px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 200ms;
+    cursor: pointer;
+}
+.services .cardRow .card .icon .material-icons{
+font-size: 40px;
+padding: 10px;
+}
+.services .cardRow .card .cardTitle{
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.services .cardRow .card .cardContent{
+    font-size: 15px;
+    margin-top: 8px;
+}
+.services .cardRow .card :hover{
+    transform: scale(1.08);
+}
+.services .cardRow .card:hover .icon .material-icons{
+    color: #7DD181;
+}
+.services .cardRow .card:hover .cardTitle{
+    color: #7DD181;
+}
+.booking{
+width: 100%;
+
+
+background-image: url(https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+background-position: center;
+background-size: cover;
+}
+.booking .overlay{
+    
+    padding: 45px 25px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+.booking .heading{
+    font-size:30px ;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+.booking .content{
+text-align: center;
+margin-top: 10px;
+margin-bottom:30px ;
+
+}
+
+
+.booking .btn, .contact .contactForm form .btn{
+    background-color: #7DD181;
+    padding: 10px 25px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 590;
+    color: #080808;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+}
+.booking .btn:hover{
+    transform: scale(1.8);
+}
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 120px;
+}
+.contact .contactDetails{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact .contactDetails h2{
+    margin-bottom: 10px;
+}
+.contact .contactDetails .icons{
+    display: flex;
+   
+}
+.contact .contactDetails .icons .icon{
+    width: 40px;
+    margin-right: 12px;
+    margin: 16px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+.contact .contactDetails .icons .icon:hover{
+    transform: translateY(-5px);
+}
+.contact .contactForm{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+flex-direction: column;
+}
+.contact .contactForm form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+}
+.contact .contactForm h2{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+.contact .contactForm form input,.contact .contactForm form textarea{
+    margin: 8px 0;
+    padding: 8px;
+    border: 1px solid #7DD181;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    font-family:  'Raleway', sans-serif;
+    outline: none;
+    width: 80%;
+
+
+}
+@media screen and (min-width:768px){
+    .navbar .navLinks{
+        width: 500px;
+    }
+    .navbar .navLinks ul{
+       
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 20px;
+        font-weight: 400;
+    
+    }
+    
+   
+}
+@media screen and (max-width:640px){
+
+
+    .contact{
+     
+        padding: 120px 50px;
+    }
+    .contact .contactDetails{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact .contactDetails h2{
+        margin-bottom: 10px;
+    }
+    .contact .contactDetails .icons{
+        display: flex;
+        margin-top: 10px;
+       
+    }
+    .contact .contactDetails .icons .icon{
+        width: 30px;
+        margin-right: 8px;
+        margin: 16px;
+       
+        transition: all 200ms ease-in-out;
+       
+    }
+    .contact .contactDetails .icons .icon:hover{
+        transform: translateY(-5px);
+    }
+    .contact .contactForm{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    flex-direction: column;
+    }
+    .contact .contactForm form{
+        padding: 0 10px;
+    }
+    .contact .contactForm h2{
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .contact .contactForm form input,.contact .contactForm form textarea{
+        width: 90%;
+    
+    
+    }
+}

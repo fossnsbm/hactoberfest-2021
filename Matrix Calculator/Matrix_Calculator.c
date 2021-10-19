@@ -60,14 +60,14 @@ char go;
     while (1)
         {
 
-      //calculator manu
+      //calculator menu
             printf("\n---------------------------");
         printf("\n  1. Matrices multification\n");
         printf("  2. Matrices Divide\n");
         printf("  3. Matrices sum\n");
         printf("  4. Matrices subtract\n");
-        printf("  5. All\n");//3
-        printf("  6. EXIT\n");//4
+        printf("  5. All\n");
+        printf("  6. EXIT\n");
     
         printf("\nWhat do you want?: ");
         scanf("%d",&md);
@@ -147,7 +147,7 @@ char go;
 
                 case 4:
                 { 
-                    // Matrices sumbtract logic
+             // Matrices sumbtract logic
                     printf("\nMatrices subtract\n");
                     int sub[r1][c1];
                     for(i=0;i<r1;i++){

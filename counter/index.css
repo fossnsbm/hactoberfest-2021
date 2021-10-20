@@ -1,0 +1,18 @@
+body {
+  background-color: #ddd;
+}
+div {
+  background-color: aliceblue;
+  text-align: center;
+  width: fit-content;
+  margin: 10px;
+  padding: 20px;
+  font-family: "Roboto";
+  margin: auto;
+  margin-top: 37vh;
+}
+button {
+  padding: 7px 10px;
+  font-size: 20px;
+  font-family: "Roboto";
+}

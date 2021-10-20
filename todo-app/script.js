@@ -42,18 +42,57 @@ function addTodo(e){
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv); 
+
 }
 
 function deleteCheck(e){
     document.getElementById('error-div').style.display = 'none';
 
-    console.log(e.target);
     const item=e.target;
+
     if(item.classList[0]==='trash-btn'){
-        const todo=item.parentElement;
-        todo.classList.add("out");
-        todo.addEventListener('transitionend', function(){
-            todo.remove();
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Are you sure ?',
+            text: "You won't be able to revert this !",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it !',
+            cancelButtonText: 'No, cancel !',
+//            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+              swalWithBootstrapButtons.fire(
+                'Deleted !',
+                'Your To-do has been deleted.',
+                'success'
+              )
+              
+              const todo=item.parentElement;
+              todo.classList.add("out");
+              todo.addEventListener('transitionend', function(){
+                  todo.remove();
+              });
+              return;
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your To-do is safe :)',
+                'error'
+              )
+            }
         });
     }
     if(item.classList[0]==='complete-btn'){

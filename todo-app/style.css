@@ -4,20 +4,20 @@ body {
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-  }
-  form {
+}
+form {
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  header{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1rem;
-  }
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
 form input,
 form button {
     padding: 0.5rem;
@@ -42,6 +42,7 @@ form button:hover{
 form input:focus{
     outline: none;
 }
+
 .error-div {
     background-color: #c3d71f;
     width: 25%;
@@ -58,6 +59,26 @@ form input:focus{
     color: red;
     width: auto;
     font-family:'Courier New', Courier, monospace;
+}
+
+.swal2-cancel {
+    background-color: green;
+    padding: 5px 15px;
+    border-color: green !important;
+    margin: 0 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.swal2-confirm {
+    background-color: red;
+    padding: 5px 15px;
+    border-color: red !important;
+    margin: 0 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .todo-cont{

@@ -49,11 +49,6 @@ function deleteCheck(e){
 
     const item=e.target;
     if(item.classList[0]==='trash-btn'){
-        console.log('hi');
-        // const confirmDeleting = window.confirm("Want to delete the to-do?");
-        // if(!confirmDeleting){
-        //     return;
-        // }
 
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {

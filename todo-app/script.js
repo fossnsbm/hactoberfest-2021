@@ -42,12 +42,14 @@ function addTodo(e){
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv); 
+
 }
 
 function deleteCheck(e){
     document.getElementById('error-div').style.display = 'none';
 
     const item=e.target;
+
     if(item.classList[0]==='trash-btn'){
 
         const swalWithBootstrapButtons = Swal.mixin({
@@ -65,14 +67,21 @@ function deleteCheck(e){
             showCancelButton: true,
             confirmButtonText: 'Yes, delete it !',
             cancelButtonText: 'No, cancel !',
-            reverseButtons: true
+//            reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
+
               swalWithBootstrapButtons.fire(
                 'Deleted !',
                 'Your To-do has been deleted.',
                 'success'
               )
+              
+              const todo=item.parentElement;
+              todo.classList.add("out");
+              todo.addEventListener('transitionend', function(){
+                  todo.remove();
+              });
               return;
             } else if (
               /* Read more about handling dismissals below */
@@ -85,13 +94,6 @@ function deleteCheck(e){
               )
             }
         });
-        
-        const todo=item.parentElement;
-        todo.classList.add("out");
-        todo.addEventListener('transitionend', function(){
-            todo.remove();
-        });
-
     }
     if(item.classList[0]==='complete-btn'){
         const todo=item.parentElement;

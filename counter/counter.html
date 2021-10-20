@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="counter">Counter : 0</h1>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </div>
+
+</body>
+<script>
+
+    const ele = document.getElementById("counter")
+    let txt = 0;
+    let int;
+    let start = true;
+    const btnstart = document.getElementById("start").addEventListener("click", () => {
+        if (start) {
+            int = setInterval(() => {
+                txt = txt + 1;
+                //console.log(txt);
+                ele.innerText = `Counter : ${txt}`
+            }, 1000);
+            start = false;
+        }
+    })
+    const btnstop = document.getElementById("stop").addEventListener("click", () => {
+        clearInterval(int);
+    })
+</script>
+
+</html>

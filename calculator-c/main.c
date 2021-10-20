@@ -14,37 +14,100 @@ ELF 64-bit LSB pie executable, x86-64 - bianry file
 
 */
 
+// function for Binary Addition
+int binAddition(int a, int b)
+{
+    int c; //carry
+    while (b != 0) {
+        //find carry and shift it left
+        c = (a & b) << 1;
+        //find the sum
+        a = a ^ b;
+        b = c;
+    }
+    return a;
+}
+
+// function for Binary Subtraction
+int binSubtracton(int a, int b)
+{
+    int carry;
+    //get 2's compliment of b and add in a
+    b = binAddition(~b, 1);
+
+    while (b != 0) {
+        //find carry and shift it left
+        carry = (a & b) << 1;
+        //find the sum
+        a = a ^ b;
+        b = carry;
+    }
+    return a;
+}
+
+
 int main()
 {
-    char op;
+    char op, type;
     double first, second;
     char exit;
+    int binAdd, binSub, number1, number2, x, y;
 
     do{
-        printf("Enter an operator (+, -, *, /): ");
-        scanf(" %c", &op);
-        printf("Enter first operand: ");
-        scanf("%lf", &first);
-        printf("Enter second operand: ");
-        scanf("%lf", &second);
-
-        switch (op)
+        printf("Choose Binary or Decimal (B/D): ");
+        scanf("%c", &type);
+        
+        switch(type)
         {
-        case '+':
-            printf("%.1lf + %.1lf = %.1lf\n", first, second, first + second);
-            break;
-        case '-':
-            printf("%.1lf - %.1lf = %.1lf\n", first, second, first - second);
-            break;
-        case '*':
-            printf("%.1lf * %.1lf = %.1lf\n", first, second, first * second);
-            break;
-        case '/':
-            printf("%.1lf / %.1lf = %.1lf\n", first, second, first / second);
-            break;
-        // operator doesn't match any case constant
-        default:
-            printf("Error! operator is not correct");
+            case 'D':
+                printf("Enter first operand: ");
+                scanf("%lf", &first);
+                printf("Enter an operator (+, -, *, /): ");
+                scanf(" %c", &op);
+                printf("Enter second operand: ");
+                scanf("%lf", &second);
+                
+                switch (op)
+                {
+                    case '+':
+                        printf("%.1lf + %.1lf = %.1lf\n", first, second, first + second);
+                        break;
+                    case '-':
+                        printf("%.1lf - %.1lf = %.1lf\n", first, second, first - second);
+                        break;
+                    case '*':
+                        printf("%.1lf * %.1lf = %.1lf\n", first, second, first * second);
+                        break;
+                    case '/':
+                        printf("%.1lf / %.1lf = %.1lf\n", first, second, first / second);
+                        break;
+                    // operator doesn't match any case constant
+                    default:
+                        printf("Error! operator is not correct");
+                }
+                
+             case 'B':
+                printf("Enter first operand: ");
+                scanf("%d", &number1);
+                printf("Enter an operator (+, -): ");
+                scanf(" %c", &op);
+                printf("Enter second operand: ");
+                scanf("%d", &number2);
+                
+                switch (op)
+                {
+                    case '+':
+                        binAdd = binAddition(number1, number2);
+                        printf("%d + %d = %d\n", number1, number2, binAdd);
+                        break;
+                    case '-':
+                        binSub = binSubtracton(number1, number2);
+                        printf("%d - %d = %d\n", number1, number2, binSub);
+                        break;
+                    // operator doesn't match any case constant
+                    default:
+                        printf("Error! operator is not correct");
+                }
         }
 
         // repeating until user provide correct input

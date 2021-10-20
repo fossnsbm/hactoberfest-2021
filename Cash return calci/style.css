@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap');
+
+body{
+    background-color:rgb(218, 243, 250) ;
+    height: 100vh;
+    max-width: 35%;
+    font-family: 'Poppins', sans-serif;
+    margin:auto;
+    text-align: center;
+    
+}
+
+.container {
+    background-color: rgb(188, 239, 253);
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px #353535;
+    padding: 1rem;
+    margin-top: 2.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color:rgb(0, 35, 50);
+}
+
+p{
+    color: rgb(0, 35, 50);
+}
+
+.label{
+    color: rgb(0, 35, 50);
+}
+
+.container input{
+    height: 0rem;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    border-radius:10px;
+    box-shadow:  3px 3px 3px #353535;
+}
+
+.container button{
+    font-weight: bold;
+    color: rgb(0, 35, 50);
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 35, 50);
+    cursor: pointer;
+}
+
+
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    box-shadow: 5px 5px 10px 5px #353535;
+}
+
+.no-of-notes{
+    background-color: white;
+    font-weight: bold;
+}
+
+.output table,th,td{
+    border: 2px solid rgb(0, 35, 50);
+    padding: 0.5rem;
+}
+
+.cash-given-input{
+    display: none;
+}
+.returnChange{
+    display:none;
+}
+#error-message{
+    color: rgb(164, 6, 6);
+    padding-top: 1rem;
+}
+
+.footer a {
+    padding-inline: 1rem;
+    font-size: 50px;
+    color: rgb(0, 35, 50);
+    text-decoration: none;
+}
+
+#me{
+    font-size: 1.8em;
+    color:#36606c;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-family: 'WindSong', cursive;
+}

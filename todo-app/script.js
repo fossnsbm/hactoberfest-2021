@@ -13,6 +13,13 @@ filteropt.addEventListener('click', filterTodo);
 function addTodo(e){
     e.preventDefault();
 
+    if(todoInput.value == ''){
+        document.getElementById('error-div').style.display = 'block';
+        return;
+    }
+
+    document.getElementById('error-div').style.display = 'none';
+
     const todoDiv=document.createElement("div");
     todoDiv.classList.add("todo");
     savaTodo(todoInput.value)
@@ -38,6 +45,8 @@ function addTodo(e){
 }
 
 function deleteCheck(e){
+    document.getElementById('error-div').style.display = 'none';
+
     console.log(e.target);
     const item=e.target;
     if(item.classList[0]==='trash-btn'){
@@ -55,6 +64,8 @@ function deleteCheck(e){
 }
 
 function filterTodo(e){
+    document.getElementById('error-div').style.display = 'none';
+
     const todos=todoList.childNodes;
     
     todos.forEach(function(todo){

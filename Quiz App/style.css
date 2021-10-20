@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+section{
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(25, 25, 26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  background-color: rgb(40, 40, 44);
+  padding: 50px 30px 30px 30px;
+  width: 90%;
+  max-width: 600px;
+  min-height: 500px;
+  border-radius: 8px;
+  color: aliceblue;
+  position: relative;
+  overflow: hidden;
+}
+.container .scoreBoard{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+form h1{
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+form .option{
+  font-size: 1.2rem;
+  margin: 10px 0 0 10px;
+  padding: 10px;
+  transition: .3s ease background-color;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+form .option label{
+  width: 100%;
+  margin-left: 10px ;
+  cursor: pointer;
+  justify-self: stretch;
+}
+form .option:hover{
+  background-color: rgb(23, 23, 24);
+}
+form .option input[type="radio"]:checked + label{
+  color: rgb(0, 238, 255);
+}
+form .option.correct{
+  background-color: green;
+}
+form button,
+.container .result-overlay button{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-family: 'Montserrat';
+  background-color: rgb(98, 100, 105);
+  border: none;
+  outline: none;
+  color: rgb(20, 20, 20);
+  cursor: pointer;
+  transition: .3s ease background-color;
+}
+button:hover,
+.container .result-overlay button:hover{
+  background-color: rgb(145, 148, 155);
+}
+.finish-btn, .next-btn{
+  width: 50%;
+  display: inline-block;
+}
+.finish-btn{
+  border-right: 1px solid black;
+}
+.next-btn{
+  border-left: 1px solid black;
+}
+
+.container .result-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(40, 40, 44);
+  text-align: center;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .result-overlay .final-result{
+  font-size: 5rem;
+}
+.container .placeholder{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./placeholder.png);
+  background-color: rgb(40, 40, 44);
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px){
+  html{
+    font-size: 17px;
+  }
+  .container form h1{
+    font-size: 1.5rem;
+  } 
+}

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 
 /*
 gcc -o calculator main.c - compile instructions 
@@ -21,7 +22,7 @@ int main()
     char exit;
 
     do{
-        printf("Enter an operator (+, -, *, /): ");
+        printf("Enter an operator (+, -, *, /,^): ");
         scanf(" %c", &op);
         printf("Enter first operand: ");
         scanf("%lf", &first);
@@ -41,6 +42,9 @@ int main()
             break;
         case '/':
             printf("%.1lf / %.1lf = %.1lf\n", first, second, first / second);
+            break;
+         case '^':
+            printf("%.1lf ^ %.1lf = %.1lf\n", first, second, pow(first,second));
             break;
         // operator doesn't match any case constant
         default:

@@ -15,7 +15,7 @@
 
 <body>
     <div class="counter-div">
-        <h1 id="counter">Counter : 0</h1>
+        <h1 id="counter">Counter : 0 : 0 : 0 : 0</h1>
         <button id="start">Start</button>
         <button id="stop">Stop</button>
         <button id="reset">Reset</button>
@@ -23,18 +23,33 @@
 
 </body>
 <script>
-
-    const ele = document.getElementById("counter")
-    let txt = 0;
+    const ele = document.getElementById("counter");
+    let hour = 0;
+    let minute = 0;
+    let sec = 0;
+    let minSec = 0;
     let int;
     let start = true;
+
     const btnstart = document.getElementById("start").addEventListener("click", () => {
         if (start) {
             int = setInterval(() => {
-                txt = txt + 1;
-                console.log(txt);
-                ele.innerText = `Counter : ${txt}`
-            }, 100);
+                minSec = minSec + 1;
+                if(minSec>59){
+                    sec++;
+                    minSec = 0;
+                }
+                if(sec>59){
+                    minute++;
+                    sec = 0;
+                }
+                if(minute>59){
+                    hour++;
+                    minute = 0;
+                }
+                ele.innerText = `Counter : ${hour} : ${minute} : ${sec} : ${minSec}`
+            }, 10);
+
             start = false;
         }
     })
@@ -45,9 +60,11 @@
 
     const btnReset = document.getElementById("reset").addEventListener("click", () => {
             clearInterval(int);
-            txt = 0;
+            sec = 0;
+            minute = 0;
+            hour = 0;
             start = true;
-            ele.innerHTML = `Counter : 0`
+            ele.innerHTML = `Counter : 0 : 0 : 0 : 0`
         }
     )
 </script>

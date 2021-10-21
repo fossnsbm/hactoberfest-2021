@@ -14,10 +14,11 @@
 </head>
 
 <body>
-    <div>
+    <div class="counter-div">
         <h1 id="counter">Counter : 0</h1>
-        <button id="start">start</button>
-        <button id="stop">stop</button>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
     </div>
 
 </body>
@@ -31,15 +32,24 @@
         if (start) {
             int = setInterval(() => {
                 txt = txt + 1;
-                //console.log(txt);
+                console.log(txt);
                 ele.innerText = `Counter : ${txt}`
-            }, 1000);
+            }, 100);
             start = false;
         }
     })
     const btnstop = document.getElementById("stop").addEventListener("click", () => {
         clearInterval(int);
+        start = true;
     })
+
+    const btnReset = document.getElementById("reset").addEventListener("click", () => {
+            clearInterval(int);
+            txt = 0;
+            start = true;
+            ele.innerHTML = `Counter : 0`
+        }
+    )
 </script>
 
 </html>

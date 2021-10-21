@@ -1,6 +1,7 @@
 body {
-  background-color: #ddd;
+  background-color: #dd3030;
 }
+
 div {
   background-color: aliceblue;
   text-align: center;
@@ -10,9 +11,21 @@ div {
   font-family: "Roboto";
   margin: auto;
   margin-top: 37vh;
+  border-radius: 18.5px;
+  border: solid 3px black;
+
 }
 button {
   padding: 7px 10px;
   font-size: 20px;
   font-family: "Roboto";
+  border-radius: 9px;
+  background-color: #23e323;
+  border-color: #23e323;
+}
+
+button:hover{
+  background-color: rgb(145, 240, 121);
+  border-color: rgb(145, 240, 121);
+  cursor: pointer;
 }

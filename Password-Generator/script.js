@@ -42,7 +42,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = ''
     const typesCount = lower + upper + number + symbol
     const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0])
-    
+
     if(typesCount === 0) {
         return ''
     }
@@ -53,9 +53,27 @@ function generatePassword(lower, upper, number, symbol, length) {
             generatedPassword += randomFunc[funcName]()
         })
     }
+    let multiplies;
+    if(typesCount == 1){
+        multiplies = 1.25;
+    }
+    if(typesCount == 2){
+        multiplies = 2.5;
+    }
+    if(typesCount == 3){
+        multiplies = 3.75;
+    }
+    if(typesCount == 4){
+        multiplies = 5;
+    }
 
-    const finalPassword = generatedPassword.slice(0, length)
-
+    document.getElementById('strength').innerText = `Your Password strength : ${multiplies*length} %`
+    if(multiplies * length < 74){
+        document.getElementById('strength').style.color = 'red';
+    }else{
+        document.getElementById('strength').style.color = 'white';
+    }
+    const finalPassword = generatedPassword.slice(0, length);
     return finalPassword
 }
 

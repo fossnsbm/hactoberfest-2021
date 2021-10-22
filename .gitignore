@@ -1,3 +1,5 @@
 .idea/
 
 todo-app/.idea/
+*settings.json
+.vscode/

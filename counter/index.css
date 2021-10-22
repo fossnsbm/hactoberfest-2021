@@ -2,10 +2,10 @@ body {
   background-color: #dd3030;
 }
 
-div {
+.counter-div {
   background-color: aliceblue;
   text-align: center;
-  width: fit-content;
+  width: 35vw;
   margin: 10px;
   padding: 20px;
   font-family: "Roboto";
@@ -13,8 +13,12 @@ div {
   margin-top: 37vh;
   border-radius: 18.5px;
   border: solid 3px black;
-
 }
+
+.counter-div h1{
+  text-align: start;
+}
+
 button {
   padding: 7px 10px;
   font-size: 20px;

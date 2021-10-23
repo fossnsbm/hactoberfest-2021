@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/@tailwindcss/forms/dist/forms.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <title>Github Trending</title>
+</head>
+<body>
+  <div id="app" class="max-w-6xl px-2 mx-auto pt-8">
+    <h1 class="font-bold text-4xl mb-6 text-center text-blue-100">What's Trending on Github?</h1>
+    <div id="trending">
+        <label for="languages-select" class="sr-only">Pick a language:</label>
+        <select id="languages-select" class="max-w-5xl mx-auto block bg-blue-100" style="min-width: 300px">
+          <option value="-1">Select Language...</option>
+        </select>
+        <div id="trending-repos-list" class="py-8">
+        </div>
+    </div>
+  </div>
+  <div id="loader" class="fixed top-0 left-0 w-full h-full text-3xl opacity-80 bg-indigo-700 z-50 hidden items-center justify-center">
+    <span class="text-white">Loading Repos...</span>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+body{
+    font-family: "Nunito",sans-serif;
+    background-image: url('images/Weather\ background\ collage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.input
+{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.inputV{
+    width: 400px;
+    height: 50px;
+    font-size: 14pt;
+}
+
+.button{
+    width: 85px;
+    height: 35px;
+    font-size: large;
+}
+
+#dispText
+{   
+    margin: auto;
+    background-color: #e7e7e7;
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    border: 0px solid black;
+}
+
+.display .name{
+    margin-top: 20px;
+    padding-top: 20px;
+}

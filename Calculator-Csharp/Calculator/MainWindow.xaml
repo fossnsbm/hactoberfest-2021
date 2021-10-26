@@ -1,0 +1,39 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Caluculator" 
+        Height="535.333" 
+        Width="400"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize"
+        WindowState="Normal" 
+        Icon="external-content.duckduckgo.com.png"
+        
+        >
+    <Grid>
+        <Button x:Name="sevenbtn" Content="7" HorizontalAlignment="Left" Margin="23,224,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="sevenbtn_Click"/>
+        <Button x:Name="eightbtn" Content="8" HorizontalAlignment="Left" Margin="94,224,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="eightbtn_Click"/>
+        <Button x:Name="ninebtn" Content="9" HorizontalAlignment="Left" Margin="165,224,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="ninebtn_Click"/>
+        <Button x:Name="div" Content="/" HorizontalAlignment="Left" Margin="236,224,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="div_Click"/>
+        <Button Content="CE" HorizontalAlignment="Left" Margin="307,224,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="Button_Click"/>
+        <Button x:Name="fourbtn" Content="4" HorizontalAlignment="Left" Margin="23,286,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="fourbtn_Click"/>
+        <Button x:Name="fivebtn" Content="5" HorizontalAlignment="Left" Margin="94,286,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="fivebtn_Click"/>
+        <Button x:Name="sixbtn" Content="6" HorizontalAlignment="Left" Margin="165,286,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="sixbtn_Click"/>
+        <Button x:Name="mult" Content="x" HorizontalAlignment="Left" Margin="236,286,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="mult_Click"/>
+        <Button Content="%" HorizontalAlignment="Left" Margin="307,286,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="Button_Click_1"/>
+        <Button x:Name="_1btn" Content="1" HorizontalAlignment="Left" Margin="23,350,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="_1btn_Click"/>
+        <Button x:Name="twobtn" Content="2" HorizontalAlignment="Left" Margin="94,350,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="twobtn_Click"/>
+        <Button x:Name="threebtn" Content="3" HorizontalAlignment="Left" Margin="165,350,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="threebtn_Click"/>
+        <Button x:Name="sub" Content="-" HorizontalAlignment="Left" Margin="236,350,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="sub_Click"/>
+        <Button x:Name="zerobtn" Content="0" HorizontalAlignment="Left" Margin="23,412,0,0" VerticalAlignment="Top" Width="137" Height="58"  FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="zerobtn_Click"/>
+        <Button x:Name="dot" Content="." HorizontalAlignment="Left" Margin="165,412,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="24" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="dot_Click"/>
+        <Button x:Name="add" Content="+" HorizontalAlignment="Left" Margin="236,412,0,0" VerticalAlignment="Top" Width="66" Height="58" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="add_Click"/>
+        <Button x:Name="equal" Content="=" HorizontalAlignment="Left" Margin="307,350,0,0" VerticalAlignment="Top" Width="66" Height="120" FontFamily="Microsoft JhengHei UI Light" FontSize="18" FontWeight="Bold" BorderThickness="0" ClipToBounds="True" Click="equal_Click"/>
+        <TextBox x:Name="Result" TextAlignment="Right" HorizontalAlignment="Right" Height="155" Margin="0,43,21,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" BorderThickness="0" FontFamily="Microsoft YaHei" FontSize="48" FontWeight="Bold" Text="0"/>
+
+    </Grid>
+</Window>

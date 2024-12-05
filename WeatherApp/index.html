@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="heading">
+    <div class="logo">
+      Simple Weather App
+    </div>
+    <div class="search-form">
+      <div>Get the weather details</div>
+      <form class="form">
+        <input type="search" id="search" class="search"
+        placeholder="Enter the location" required>
+        <button type="submit" class="btn">submit</button>
+      </form> 
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="todays-info">
+      <div class="date-time-container">
+        <div class="place-details">
+          
+        </div>
+        <div class="date-container">
+          
+        </div>
+        <div class="time-container">
+          <span class="am-pm"></span>
+        </div>
+        
+      </div>
+      <div class="today-forecast">
+        
+      </div>
+      <div class="other-info">
+      </div>
+    </div>
+  </div>
+  <div class="future-forecast">
+  </div>
+  <div class="toggle">
+    <button class="analyse">Analyse</button>
+  </div>
+  <div class="lastblock hidden">
+    <div class="container container-chart">
+    
+    </div>
+    <div class="toggle_back">
+      <button class="hide">Hide</button>
+    </div>
+  </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

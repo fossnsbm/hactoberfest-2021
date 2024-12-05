@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+}
+
+body {
+  background: url('./images/bg-img.jpg') center center/cover no-repeat;
+}
+
+/* Heading Styles Start : This holds the stylees for the logo, search form*/
+.heading {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: beige;
+  padding: 20px 40px;
+}
+
+.logo {
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.search-form div {
+  font-size: 19px;
+  font-weight: 600;
+  margin-right: 25px;
+  width: 400px;
+  letter-spacing: 0.2rem;
+}
+
+.search-form .form {
+  display: inline-block;
+
+  margin-top: 7px;
+}
+
+.form input {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 300px;
+}
+
+.form .btn {
+  background-color: rgb(97, 97, 97);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: rgb(107, 44, 44);
+  color: #fff;
+}
+.form button:active {
+  transform: scale(0.98);
+}
+/* Heading Styles End*/
+
+/* Container Styles Start : This holds all the styling for the current wether item display*/
+.container {
+  padding: 20px 70px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.container .todays-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(24, 24, 27, 0.863);
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.container .todays-info .place-details {
+  padding: 10px 5px;
+  margin-bottom: 5px;
+}
+
+.container .todays-info .place-details .place_name {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.container .todays-info .place-details .time-zone {
+  font-size: 1.2rem;
+}
+
+.container .todays-info .place-details .latlong {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.container .todays-info .date-container {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.container .todays-info .time-container {
+  font-size: 1.6rem;
+}
+.container .todays-info .time-container span {
+  font-size: 1rem;
+}
+
+.container .todays-info .today-forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15rem;
+}
+
+.container .todays-info .today-forecast img {
+  width: 150px;
+  height: 150px;
+}
+
+.container .todays-info .today-forecast .temp {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.container .todays-info .other-info {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 20px;
+  width: 20rem;
+}
+
+.container .todays-info .other-info .info {
+  display: flex;
+  padding: 5px 0;
+  margin: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Container Style End*/
+
+/* Future Forecast Styles Start : This holds the styles for the card displaying the future forecast */
+.future-forecast {
+  background-color: rgba(24, 24, 27, 0.8);
+  color: #fff;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.future-forecast .next-forecast-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  background-color: rgba(8, 8, 8, 0.8);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.future-forecast .next-forecast-items:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-10px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.future-forecast .next-forecast-items .day {
+  padding: 5px 15px;
+  background-color: black;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.future-forecast .next-forecast-items .temp {
+  font-weight: 100;
+  margin: 5px 0;
+}
+
+/* Future Forecast Styles End */
+
+/* Toggle Styles Start : This has styles for the analyse button */
+.toggle {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(24, 24, 27, 0.8);
+}
+
+.toggle .analyse {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.toggle .analyse:hover {
+  background-color: rgb(40, 78, 88);
+}
+.toggle .analyse:active {
+  transform: scale(0.95);
+}
+
+/* Toggle Styles End */
+
+/* Lastblock styles Start : This holds the styles for the graph and the hide button */
+.lastblock {
+  background-color: #000000dc;
+}
+.toggle_back {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle_back .hide {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.toggle_back .hide:hover {
+  background-color: rgb(109, 65, 25);
+}
+.toggle_back .hide:active {
+  transform: scale(0.95);
+}
+
+.toggle.hidden,
+.lastblock.hidden {
+  display: none;
+}
+
+/* Lastblock Styles End */
+
+/* Media quarries */
+
+@media (max-width: 1020px) {
+  .container {
+    text-align: center;
+  }
+
+  .container .todays-info .other-info {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+
+  .container .todays-info .other-info .info div:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 895px) {
+  .search-form div {
+    margin-right: 18px;
+    letter-spacing: normal;
+    width: 300px;
+  }
+
+  .form input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 710px) {
+  .heading {
+    text-align: center;
+  }
+
+  .heading .search-form {
+    justify-content: center;
+  }
+
+  .form {
+    margin-top: 10px;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .container .todays-info .date-time-container {
+    width: 15rem;
+    margin-bottom: 10px;
+  }
+
+  .container .todays-info .today-forecast {
+    width: 10rem;
+  }
+
+  .container .todays-info .other-info .info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 598px) {
+  .heading .logo {
+    text-align: center;
+  }
+
+  .heading .search-form {
+    flex-direction: column;
+  }
+
+  .heading .search-form div {
+    text-align: center;
+  }
+
+  .container .todays-info {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .container .todays-info .date-time-container {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  .container .todays-info .today-forecast {
+    width: auto;
+
+    margin-bottom: 10px;
+  }
+
+  .container .todays-info .other-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .todays-info .other-info {
+    width: auto;
+  }
+  .container .todays-info .other-info .info {
+    flex-direction: column;
+  }
+
+  .heading {
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .search-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .heading .search-form {
+    margin-left: -10px;
+  }
+
+  .heading .search-form .search {
+    width: 100%;
+    margin-left: -20px;
+    margin-bottom: 10px;
+  }
+
+  .heading .search-form .btn {
+    width: 100%;
+    margin-left: -20px;
+  }
+
+  .container {
+    padding: 20px 40px;
+  }
+
+  .container .todays-info {
+    padding: auto;
+  }
+}
+
+/* End of Media Queries */
